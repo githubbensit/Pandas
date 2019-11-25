@@ -1,0 +1,17 @@
+import pandas as pd
+x = pd.read_csv ('cars.csv')
+#Displaying first FIVE ROWS with odd numbered COLUMNS
+#(2.a)
+x.iloc[[0,1,2,3,4,],[0,2,4,6,8,10]]
+
+#Displaying row labeled as Mazda RX4
+#(2.b)
+x.iloc[[0]]
+
+#Identifying number of 'cyl' that Camaro Z28
+#(2.c)
+x.loc[[23],['Model','cyl']] 
+
+#Determining number/s of 'cyl' and gearr type does Mazda RX4 Wag, Ford Pantera L, and Honda Civic has
+#(2.d)
+x.loc[[1,18,28],['Model','cyl','gear']]
